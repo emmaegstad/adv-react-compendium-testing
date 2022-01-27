@@ -3,6 +3,7 @@ export async function imageAsc() {
     'https://api.nasa.gov/planetary/apod?api_key=YunY96dmRe6pkaOAen1SKJJPUFEd2a7TbMPGntRj&count=25'
   );
   const data = await resp.json();
+  console.log(data);
   const sorted = data.sort((a, b) => {
     return new Date(a.date) - new Date(b.date);
   });
